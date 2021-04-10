@@ -17,6 +17,7 @@ future==0.18.2
 gevent==21.1.2
 gevent-websocket==0.10.1
 greenlet==1.0.0
+gunicorn==20.1.0
 importlib-metadata==3.10.0
 itsdangerous==1.1.0
 Jinja2==2.11.3
