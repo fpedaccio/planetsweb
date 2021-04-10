@@ -16,19 +16,19 @@ def send(sum=sum):
         operation = request.form['operation']
 
         if operation == 'Jupiter':
-            sum = (float(weight)*24.79)/9.8
+            sum = int((int(weight)*24.79)/9.8)
             return render_template('app.html', sum=sum)
 
-        elif operation == 'subtract':
-            sum = float(num1) - float(num2)
+        elif operation == 'Moon':
+            sum = int((int(weight)*1.62)/9.8)
             return render_template('app.html', sum=sum)
 
-        elif operation == 'multiply':
-            sum = float(num1) * float(num2)
+        elif operation == 'Mars':
+            sum = int((int(weight)*3.7)/9.8)
             return render_template('app.html', sum=sum)
 
-        elif operation == 'divide':
-            sum = float(num1) / float(num2)
+        elif operation == 'Saturn':
+            sum = int((int(weight)*10.44)/9.8)
             return render_template('app.html', sum=sum)
         else:
             return render_template('app.html')
