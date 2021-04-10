@@ -16,7 +16,7 @@ def send(sum=sum):
         operation = request.form['operation']
 
         if operation == 'Jupiter':
-            sum = int((int(weight)*24.79)/9.8)
+            sum = str(int((int(weight)*24.79)/9.8)) + "KG"
             return render_template('app.html', sum=sum)
 
         elif operation == 'Moon':
