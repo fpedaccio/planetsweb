@@ -1,5 +1,6 @@
+  
 from flask import Flask, render_template, request
-#hola
+
 app = Flask(__name__)
 
 
@@ -15,12 +16,12 @@ def send(sum=sum):
         num2 = request.form['num2']
         operation = request.form['operation']
 
-        if operation == 'Jupiter':
-            sum = (float(num1)*24.79)/9.8
+        if operation == 'add':
+            sum = float(num1) + float(num2)
             return render_template('app.html', sum=sum)
 
         elif operation == 'subtract':
-            sum = (float(num1)*3.7)/9.8
+            sum = float(num1) - float(num2)
             return render_template('app.html', sum=sum)
 
         elif operation == 'multiply':
@@ -37,4 +38,3 @@ def send(sum=sum):
 if __name__ == ' __main__':
     app.debug = True
     app.run()
-
