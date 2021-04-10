@@ -15,12 +15,12 @@ def send(sum=sum):
         num2 = request.form['num2']
         operation = request.form['operation']
 
-        if operation == 'add':
-            sum = float(num1) + float(num2)
+        if operation == 'Jupiter':
+            sum = (float(num1)*24.79)/9.8
             return render_template('app.html', sum=sum)
 
         elif operation == 'subtract':
-            sum = float(num1) - float(num2)
+            sum = (float(num1)*3.7)/9.8
             return render_template('app.html', sum=sum)
 
         elif operation == 'multiply':
