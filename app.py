@@ -12,12 +12,11 @@ def main():
 @app.route('/send', methods=['POST'])
 def send(sum=sum):
     if request.method == 'POST':
-        num1 = request.form['num1']
-        num2 = request.form['num2']
+        weight = request.form['weight']
         operation = request.form['operation']
 
-        if operation == 'add':
-            sum = float(num1) + float(num2)
+        if operation == 'Jupiter':
+            sum = (float(weight)*24.79)/9.8
             return render_template('app.html', sum=sum)
 
         elif operation == 'subtract':

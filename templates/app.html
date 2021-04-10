@@ -28,28 +28,20 @@
     <!-- Form -->
     <div class="container">
       <form action="/send" method="POST">
-        <label for="Number One">First Number</label>
+        <label for="Number One">Tell us your weight on Earth (KG)</label>
         <input
           type="text"
-          placeholder="First Number"
+          placeholder="KG"
           class="u-full-width"
-          name="num1"
+          name="weight"
         />
 
-        <label for="Number Two">Second Number</label>
-        <input
-          type="text"
-          placeholder="Second Number"
-          class="u-full-width"
-          name="num2"
-        />
-
-        <label for="Operation">Operation</label>
+        <label for="Operation">In what planet?</label>
         <select class="u-full-width" name="operation">
-          <option value="add">Add</option>
-          <option value="subtract">Subtract</option>
-          <option value="multiply">Multiply</option>
-          <option value="divide">Divide</option>
+          <option value="Jupiter">Jupiter/option>
+          <option value="Mars">Mars</option>
+          <option value="Moon">Moon</option>
+          <option value="Saturn">Saturn</option>
         </select>
 
         <input type="submit" value="Calculate" id="calc_btn" />
