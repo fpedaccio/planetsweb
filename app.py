@@ -24,11 +24,33 @@ def send(sum=sum):
             return render_template('app.html', sum=sum)
 
         elif operation == 'Mars':
-            sum = "Your weight in that planet will be: " + str(int((int(weight)*3.7)/9.8)) + " KG"
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*3.72)/9.8)) + " KG"
             return render_template('app.html', sum=sum)
 
         elif operation == 'Saturn':
             sum = "Your weight in that planet will be: " + str(int((int(weight)*10.44)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        
+        elif operation == 'Venus':
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*8.87)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Mercury':
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*3.70)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Uranus':
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*8.87)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Neptune':
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*11.15)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Europa':
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*1.31)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Sun':
+            sum = "You will be hot as fuck. But your weight in the sun will be: " + str(int((int(weight)*274)/9.8)) + " KG"
+            return render_template('app.html', sum=sum)
+        elif operation == 'Black hole':
+            sum = "You probably won't be in one piece. But your weight would be ∞"
             return render_template('app.html', sum=sum)
         else:
             return render_template('app.html')
