@@ -16,19 +16,19 @@ def send(sum=sum):
         operation = request.form['operation']
 
         if operation == 'Jupiter':
-            sum = str(int((int(weight)*24.79)/9.8)) + " KG"
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*24.79)/9.8)) + " KG"
             return render_template('app.html', sum=sum)
 
         elif operation == 'Moon':
-            sum = str(int((int(weight)*1.62)/9.8)) + " KG"
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*1.62)/9.8)) + " KG"
             return render_template('app.html', sum=sum)
 
         elif operation == 'Mars':
-            sum = str(int((int(weight)*3.7)/9.8)) + " KG"
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*3.7)/9.8)) + " KG"
             return render_template('app.html', sum=sum)
 
         elif operation == 'Saturn':
-            sum = str(int((int(weight)*10.44)/9.8)) + " KG"
+            sum = "Your weight in that planet will be: " + str(int((int(weight)*10.44)/9.8)) + " KG"
             return render_template('app.html', sum=sum)
         else:
             return render_template('app.html')
