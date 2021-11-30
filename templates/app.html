@@ -34,28 +34,15 @@
   <!-- Form -->
   <div class="container">
     <form action="/send" method="POST">
-      <label for="Number One">Tell us your weight on Earth (KG)</label>
-      <input type="text" placeholder="KG" class="u-full-width" name="weight" />
+      <label for="Number One">Addres</label>
+      <input type="text" placeholder="Your addres" class="u-full-width" name="addres" />
 
-      <label for="Operation">In what planet?</label>
-      <select class="u-full-width" name="operation">
-        <option value="Jupiter">Jupiter</option>
-        <option value="Mars">Mars</option>
-        <option value="Moon">Moon</option>
-        <option value="Saturn">Saturn</option>
-        <option value="Venus">Venus</option>
-        <option value="Mercury">Mercury</option>
-        <option value="Uranus">Uranus</option>
-        <option value="Neptune">Neptune</option>
-        <option value="Europa">Europa moon (Jupiter)</option>
-        <option value="Sun">Sun</option>
-        <option value="Black hole">Black hole</option>
-      </select>
 
-      <input type="submit" value="Calculate" class="btn btn-primary" id="calc_btn" />
+
+      <input type="submit" value="Get balance" class="btn btn-primary" id="calc_btn" />
       <br />
       <div class="alert">
-        {{ sum }}
+        {{ balance }}
       </div>
     </form>
 
