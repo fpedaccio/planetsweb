@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   
 
-  </head>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weight Planet Calculator</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-    />
+<head>
 
-    <style>
-      .alert {
-        background: rgb(39, 90, 255);
-        padding: 1rem;
-        border-radius: 5px;
-        color: white;
-        margin: 1rem;
-        background-image: url("bg.png");
-      }
-    </style>
-  </head>
 
-  <body>
-    <div class="container">
-      <h3>Weight Planet Calculator</h3>
-      
-    </div>
+</head>
 
-    <!-- Form -->
-    <div class="container">
-      <form action="/send" method="POST">
-        <label for="Number One">Tell us your weight on Earth (KG)</label>
-        <input
-          type="text"
-          placeholder="KG"
-          class="u-full-width"
-          name="weight"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Eth Scan balance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
 
-        <label for="Operation">In what planet?</label>
-        <select class="u-full-width" name="operation">
-          <option value="Jupiter">Jupiter</option>
-          <option value="Mars">Mars</option>
-          <option value="Moon">Moon</option>
-          <option value="Saturn">Saturn</option>
-          <option value="Venus">Venus</option>
-          <option value="Mercury">Mercury</option>
-          <option value="Uranus">Uranus</option>
-          <option value="Neptune">Neptune</option>
-          <option value="Europa">Europa moon (Jupiter)</option>
-          <option value="Sun">Sun</option>
-          <option value="Black hole">Black hole</option>
-        </select>
+  <style>
+    .alert {
+      background: rgb(39, 90, 255);
+      padding: 1rem;
+      border-radius: 5px;
+      color: white;
+      margin: 1rem;
+      background-image: url("bg.png");
+    }
+  </style>
+</head>
 
-        <input type="submit" value="Calculate" class="btn btn-primary" id="calc_btn" />
-        <br />
-        <div class="alert">
-          {{ sum }}
-        </div>
-      </form>
-    
-  </body>
+<body>
+  <div class="container">
+    <h3>Weight Planet Calculator</h3>
+
+  </div>
+
+  <!-- Form -->
+  <div class="container">
+    <form action="/send" method="POST">
+      <label for="Number One">Insert your ethereum addres</label>
+      <input type="text" placeholder="your wallet" class="u-full-width" name="addres" />
+
+
+
+      <input type="submit" value="Get Balance" class="btn btn-primary" id="calc_btn" />
+      <br />
+      <div class="alert">
+        {{ sum }}
+      </div>
+    </form>
+
+</body>
+
 </html>
