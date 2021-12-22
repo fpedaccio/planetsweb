@@ -2,7 +2,7 @@ import requests
 from flask import Flask, render_template, request
 from web3 import Web3
 app = Flask(__name__)
-
+# WTF PASO
 
 def check_human(Address):
     api = request.get("https://api.poh.dev/profiles/" + Address)
