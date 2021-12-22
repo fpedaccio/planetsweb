@@ -4,12 +4,15 @@ from web3 import Web3
 app = Flask(__name__)
 # WTF PASO
 
-def check_human(Address):
-    api = request.get("https://api.poh.dev/profiles/" + Address)
+def is_human(addres):
+    api = requests.get("https://api.poh.dev/profiles/" + addres)
     api = api.json()
-    status = api["status"]
-    is_registered = status == "REGISTERED"
-    return is_registered
+    try:
+        status = api["status"]
+        is_registered = status == "REGISTERED"
+        return is_registered
+    except:
+        return False
 
 
 
@@ -23,7 +26,7 @@ def send(balance=balance):
     if request.method == 'POST':
         Addres = request.form['addres']
         node = "https://mainnet.infura.io/v3/7cad44d68f7e4c5fa5935f78d354e696"
-        is_human = check_human(Addres)
+        is_human = is_human(Addres)
         if is_human == True:
             print("Human")
         
